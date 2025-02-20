@@ -3,7 +3,7 @@
  * IPQ9574 RDP418 board device tree source
  *
  * Copyright (c) 2020-2021 The Linux Foundation. All rights reserved.
- * Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2022-2023, 2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 /dts-v1/;
@@ -288,7 +288,7 @@
 	pinctrl-0 = <&pci2_pin>;
 	pinctrl-names = "default";
 	perst-gpio = <&tlmm 29 GPIO_ACTIVE_LOW>;
-	status = "okay";
+	status = "disabled";
 
 	pcie2_rp {
 		reg = <0 0 0 0 0>;
@@ -304,8 +304,9 @@
 	pinctrl-names = "default";
 	perst-gpio = <&tlmm 32 GPIO_ACTIVE_LOW>;
 	status = "okay";
+	compliance = <1>;
 
-	pcie3_rp {
+	pcie3_rp: pcie3_rp {
 		reg = <0 0 0 0 0>;
 	};
 };
@@ -695,3 +696,4 @@
 &q6v5_wcss {
 	status = "okay";
 };
+#include "external-modem-pcie.dtsi"

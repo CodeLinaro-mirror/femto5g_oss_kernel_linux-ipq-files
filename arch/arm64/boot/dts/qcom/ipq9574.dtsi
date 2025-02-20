@@ -3,7 +3,7 @@
  * IPQ9574 SoC device tree source
  *
  * Copyright (c) 2020-2021 The Linux Foundation. All rights reserved.
- * Copyright (c) 2022-2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2022-2025 Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 #include <dt-bindings/clock/qcom,apss-ipq.h>
@@ -4226,6 +4226,14 @@
 		compatible = "qcom,testmhi";
 		qcom,wlan-ramdump-dynamic = <0x600000>;
 	};
+
+	qcom,fsm-dp {
+		compatible = "qcom,fsm-dp";
+		qcom,ul-bufs = <16128 4096>;
+		qcom,rx-queue-size = <1024 1024 1024 1024>;
+		dma-coherent;
+	};
+
 };
 
 #include "ipq9574-cpr-regulator.dtsi"

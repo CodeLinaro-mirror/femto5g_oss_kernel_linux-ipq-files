@@ -4227,6 +4227,15 @@
 		qcom,wlan-ramdump-dynamic = <0x600000>;
 	};
 
+	tti {
+		gpios = <&tlmm 41 0>;
+		assert-falling-edge;
+		compatible = "tti-gpio";
+		enable-gpio-affinity;
+		gpio-cpu-affinity = <3>;
+		status = "okay";
+	};
+
 	qcom,fsm-dp {
 		compatible = "qcom,fsm-dp";
 		qcom,ul-bufs = <16128 4096>;

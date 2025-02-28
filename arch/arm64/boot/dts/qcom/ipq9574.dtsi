@@ -248,10 +248,10 @@
 		interrupts = <GIC_PPI 7 (GIC_CPU_MASK_SIMPLE(4) | IRQ_TYPE_LEVEL_HIGH)>;
 	};
 
-        qcn9224_legacy_irq0: qcn9224_legacy_irq0 {
+	qcn9224_legacy_irq0: qcn9224_legacy_irq0 {
 		compatible = "qcom,qcn9224_legacy_irq";
 		node_id = <0>;
-		status = "okay";
+		status = "disabled";
 
 		qcn9224_in0: legacy_interrupt {
 			interrupt-controller;
@@ -262,7 +262,7 @@
 	qcn9224_legacy_irq1: qcn9224_legacy_irq1 {
 		compatible = "qcom,qcn9224_legacy_irq";
 		node_id = <1>;
-		status = "okay";
+		status = "disabled";
 
 		qcn9224_in1: legacy_interrupt {
 			interrupt-controller;
@@ -273,7 +273,7 @@
 	qcn9224_legacy_irq2: qcn9224_legacy_irq2 {
 		compatible = "qcom,qcn9224_legacy_irq";
 		node_id = <2>;
-		status = "okay";
+		status = "disabled";
 
 		qcn9224_in2: legacy_interrupt {
 			interrupt-controller;
@@ -284,7 +284,7 @@
 	qcn9224_legacy_irq3: qcn9224_legacy_irq3 {
 		compatible = "qcom,qcn9224_legacy_irq";
 		node_id = <3>;
-		status = "okay";
+		status = "disabled";
 
 		qcn9224_in3: legacy_interrupt {
 			interrupt-controller;
